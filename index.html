@@ -1,0 +1,57 @@
+<html>
+
+<head>
+  <title>GigiMimi</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <!-- place the custom tag anywhere inside the body -->
+  <div class="container">
+    <gigi></gigi>
+    <mimi></mimi>
+  </div>
+
+  <!-- <human></human> -->
+
+  <script type="riot/tag" src="gigi.tag"></script>
+  <script type="riot/tag" src="mimi.tag"></script>
+  <script type="riot/tag" src="human.tag"></script>
+  <!-- include riot.js -->
+  <script src="https://cdn.jsdelivr.net/npm/riot@3.8/riot+compiler.min.js"></script>
+  <!-- mount the tag -->
+  <script>
+  // Making the observable object accessible to all tags here.
+    var observable = riot.observable();
+    riot.mount('*');
+  </script>
+
+  <style>
+    .container {
+      /* background: aqua; */
+      margin: auto;
+      padding: 10px;
+    }
+
+    gigi {
+      width: 50%;
+      /* background: red; */
+      float: left;
+      display: inline-block;
+    }
+
+    mimi {
+      width: 45%
+      /* margin-left: 15%; */
+      /* background: black; */
+    }
+
+    body {
+      text-align: center;
+    }
+  </style>
+</body>
+
+</html>
